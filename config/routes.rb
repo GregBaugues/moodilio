@@ -1,6 +1,3 @@
 Moodilio::Application.routes.draw do
-  root 'welcome#index'
-
-  get '/sms', to: 'sms#incoming'
-
+  resources :sms, only: [:index]
 end

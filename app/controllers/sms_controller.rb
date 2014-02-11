@@ -1,7 +1,7 @@
-class SMSController < ApplicationController
+class SmsController < ApplicationController
 
-  def incoming
-
+  def index
+    render :json => {text: 'hello'}
   end
 
 end

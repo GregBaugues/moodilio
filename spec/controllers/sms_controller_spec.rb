@@ -1,11 +1,9 @@
 require 'spec_helper'
-describe 'SMS Controller' do
-
-  before(:all) do
-  end
+describe SmsController do
 
   it 'should recieve a SMS' do
-    get '/sms'
+    get :index
+    response.should be_success
   end
 
 end

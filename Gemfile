@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'haml'
 gem 'rails_config'
+gem 'jquery-rails'
 
 group :development do
   gem 'pry'
