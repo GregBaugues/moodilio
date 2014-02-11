@@ -9,8 +9,12 @@ gem 'turbolinks'
 gem 'haml'
 gem 'rails_config'
 
-group :testing do
+group :development do
   gem 'pry'
+end
+
+group :testing do
+  gem 'rspec'
 end
 
 group :doc do
