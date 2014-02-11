@@ -13,8 +13,8 @@ group :development do
   gem 'pry'
 end
 
-group :testing do
-  gem 'rspec'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
 end
 
 group :doc do
