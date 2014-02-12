@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :moods, -> { order("date DESC") }
+  has_many :moods, dependent: :destroy
   after_create :confirm_signup
   after_create :backfill_moods
 
