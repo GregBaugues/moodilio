@@ -17,8 +17,9 @@ class User < ActiveRecord::Base
   end
 
   def backfill_moods
+    #don't fill today
     modifier = [-1, 0, 1].sample
-    (0..6).collect do |i|
+    (1..6).collect do |i|
       date = Date.today - i.days
       score = (1..5).to_a.sample + modifier
       score += 1 if score == 0

@@ -13,7 +13,7 @@ describe 'User' do
 
   it 'should backfill modds', :vcr do
     @user.backfill_moods
-    @user.moods.size.should == 7
+    @user.moods.size.should == 6
   end
 
   # after :each do
