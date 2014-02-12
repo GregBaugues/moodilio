@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<SID>:<AUTH_TOKEN>@api.twilio.com/2010-04-01/Accounts/<SID>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B17733624442&To=%2B13125551234&Body=Gotcha+Bob%21+Thanks+for+signing+up.
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/3.11.5 (true/x86_64-darwin13.0.2 2.0.0-p353)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Date:
+      - Wed, 12 Feb 2014 20:32:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '724'
+      Connection:
+      - close
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM10fe0d1064c141d1aa71b8b50af4f58c", "date_created": "Wed,
+        12 Feb 2014 20:32:29 +0000", "date_updated": "Wed, 12 Feb 2014 20:32:29 +0000",
+        "date_sent": null, "account_sid": "<SID>", "to": "+13125551234", "from": "+17733624442",
+        "body": "Gotcha Bob! Thanks for signing up.", "status": "queued", "num_segments":
+        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "uri": "/2010-04-01/Accounts/<SID>/Messages/SM10fe0d1064c141d1aa71b8b50af4f58c.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/<SID>/Messages/SM10fe0d1064c141d1aa71b8b50af4f58c/Media.json"}}'
+    http_version: 
+  recorded_at: Wed, 12 Feb 2014 20:32:31 GMT
+recorded_with: VCR 2.8.0
