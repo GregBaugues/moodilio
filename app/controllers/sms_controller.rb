@@ -1,6 +1,6 @@
 class SmsController < ApplicationController
 
-  def index
+  def incoming
     render :json => {text: 'hello'}
   end
 

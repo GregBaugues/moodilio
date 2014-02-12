@@ -1,3 +1,3 @@
 Moodilio::Application.routes.draw do
-  resources :sms, only: [:index]
+  post 'sms', to: 'sms#incoming'
 end
