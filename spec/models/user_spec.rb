@@ -7,7 +7,7 @@ describe 'User' do
   end
 
   it 'should create a mood', :vcr do
-    @user.create_mood(Date.today, 5)
+    @user.create_mood(5)
     @user.moods.last.score.should == 5
   end
 
@@ -16,8 +16,8 @@ describe 'User' do
     @user.moods.size.should == 6
   end
 
-  # after :each do
-  #   User.destroy_all
-  # end
+  it 'should ping', :vcr do
+    @user.ping
+  end
 
 end
