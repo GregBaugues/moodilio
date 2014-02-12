@@ -10,6 +10,7 @@ gem 'haml'
 gem 'rails_config'
 gem 'jquery-rails'
 gem 'twilio-ruby'
+gem 'twitter-bootstrap-rails'
 
 group :development do
   gem 'pry'
