@@ -1,2 +1,7 @@
-- @users.each do |user|
-  %p= user.name
+%table.table
+  %tr
+    - @days.each do |day|
+      %th= day.strftime("%b-%-d")
+  - @users.each do |user|
+    %tr
+      %td= user.name
