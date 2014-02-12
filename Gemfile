@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'haml'
 gem 'rails_config'
 gem 'jquery-rails'
+gem 'twilio-ruby'
 
 group :development do
   gem 'pry'
