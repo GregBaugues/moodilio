@@ -1,7 +1,11 @@
+%h1= Settings.phone_number
 %table.table
   %tr
+    %th
     - @days.each do |day|
       %th= day.strftime("%b-%-d")
   - @users.each do |user|
     %tr
       %td= user.name
+      - user.moods.limit(7).each do |mood|
+        %td= mood.score
