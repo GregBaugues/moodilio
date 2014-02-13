@@ -13,6 +13,7 @@ class SmsController < ApplicationController
   def new_user(params)
     user = User.create(phone_number: params['From'], name: params['Body'])
     user.confirm_signup
+    user.ping
   end
 
   def check_input(user, params)
