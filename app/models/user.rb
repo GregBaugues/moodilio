@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     client.account.messages.create(
       from: Settings.phone_number,
       to: phone_number,
-      body: "Gotcha #{name}! Thanks for signing up."
+      body: "Hi #{name}! Thanks for signing up."
     )
   end
 

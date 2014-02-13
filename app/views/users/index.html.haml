@@ -1,12 +1,17 @@
 %h1 Text your name to (773) 362-4442
-%table.table
-  %tr
-    %th
-    - @days.each do |day|
-      %th= day.strftime("%b %-d")
-  - @users.each do |user|
+.span6
+  %br
+  %br
+  %table.table
     %tr
-      %td= user.name
+      %th
       - @days.each do |day|
-        - mood = user.moods.where(date: day).last
-        %td= mood.nil? ? image_tag("nada.png") : image_tag(mood.image)
+        %th= day.strftime("%b %-d")
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        - @days.each do |day|
+          - mood = user.moods.where(date: day).last
+          %td= mood.nil? ? image_tag("nada.png") : image_tag(mood.image)
+        %td
+          = raw "<a href='/call?user_id=#{user.id}'>call</a>"
