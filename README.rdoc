@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+All of the settings are stored in ```/config/settings.yml```.
+```
+cd config
+cp settings.yml.template settings.yml
+```
 
-Things you may want to cover:
+Fill in the settings for your account and phone number. The admin number is in the number that will connect a user to if you click the *call* button.
 
-* Ruby version
+This app uses *postgres*. I like the [postgresapp.com](http://postgresapp.com).
 
-* System dependencies
+Standard rails setup needed. This probably isn't exhaustive, but off the top of my head:
 
-* Configuration
+```
+echo "moodilio" > .ruby-gemset
+echo "2.0.0" > .ruby-version
+rake db:create
+rake db:migrate
 
-* Database creation
+#not sure why this doesn't happen automatically, but it wasn't for me
+rake db:migrate RAILS_ENV=test
+```
 
-* Database initialization
+Twilio folk use [ngrok](https://ngrok.com/) to provide a tunnel to my local machine for development purposes. Let's me do things like set the endpoints to ```http://moodilio.ngrok.com/sms``` which routes to my ```localhost:3000``` instead of needing to deploy to, say, heroku every time I want to test a change.
 
-* How to run the test suite
+There are a few tests which currently pass. To run:
+```rspec spec```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
