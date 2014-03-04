@@ -1,5 +1,3 @@
-== README
-
 All of the settings are stored in ```/config/settings.yml```.
 ```
 cd config
