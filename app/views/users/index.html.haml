@@ -1,5 +1,5 @@
 %h1 Text your name to (773) 362-4442
-.span6
+.span8
   %br
   %br
   %table.table
@@ -9,7 +9,7 @@
         %th= day.strftime("%b %-d")
     - @users.each do |user|
       %tr
-        %td= user.name
+        %td.span2= user.name
         - @days.each do |day|
           - mood = user.moods.where(date: day).last
           %td= mood.nil? ? image_tag("nada.png") : image_tag(mood.image)
