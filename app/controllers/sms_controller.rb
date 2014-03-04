@@ -7,6 +7,7 @@ class SmsController < ApplicationController
     else
       new_user(params)
     end
+
     render :empty_response, layout: false
   end
 
